@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Colored Byte Test</title>
+<!--Getting my javascript and css styles-->
+<script src="index.js" async></script>
+<link rel="stylesheet" href="index.css">
+
+<!-- This would be included if you wanted to use the carrousel, but in order to make my test unique from all the rest I make my own, you can get more info
+     In line 82 of the index.js, I put this in order to demostrate I know how to use it.
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+
+</head>
+<body>
+<!--All the post Interface-->
+<div id="post">
+
+    <div id="head_post"> 
+        <img src="" id="profile_pic" alt="Profile Picture"><img>
+        <div id="author_data"><p id="author_name"></p><p id="author_ubication"></p></div>
+    </div>
+
+    <div id="images">
+        <div id="images_rotatory" current="0">
+
+            <!--
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      js needs to add the neededs <div class="swiper-slide">Slide index</div>
+                    </div>
+                
+
+                 <div class="swiper-pagination"></div>
+                 <div class="swiper-button-prev"></div>
+                 <div class="swiper-button-next"></div>
+                 </div>
+            -->
+
+        </div>
+    </div>
+
+    <div id="interactions">
+        <input type="checkbox" id="btnControl"/><label class="btn" for="btnControl"><img class="unliked" src="./assets/unliked.png"  alt="like button" id="like_btn" type="checkbox"></img></label>
+        <img class="icon" src="./assets/chat.png"  alt="chat button"></img>
+        <img class="icon" src="./assets/msg.png"  alt="message button"></img>
+    </div>
+    
+    <div id="comments">
+        
+    </div>
+
+    <div id="create_comment">   
+        <input id="write_comment" ></input>
+        <button id="sumbit_comment">Post</button>
+    </div>
+
+</div>
+
+
+</body>
+</html>

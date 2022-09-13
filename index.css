@@ -1,0 +1,390 @@
+
+/* Importing Fonts */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+/* Adjusting Default Configurations */
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Post Configurations */
+
+#post{ 
+
+display: flex;
+flex-direction: column;
+
+width: 526px;
+height: 739px;
+
+border-radius: 5px;
+border: 1px solid #DEDEDE;
+box-shadow: -1px 7px 8px -5px #00000024;
+box-sizing: border-box;
+
+background: #FCFCFC;
+
+}
+
+#head_post{
+    display: flex;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+#profile_pic{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#author_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-top: 0.5em;
+}
+
+#author_name{
+    
+width: 77px;
+height: 17px;
+padding-bottom: 0.3em;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+
+color: #000000;
+
+}
+
+#author_ubication{
+    
+width: 117px;
+height: 12px;
+padding-top: 0.3em;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 12px;
+
+color: #000000;
+
+}
+
+#interactions{
+  margin: 1em;
+  display: flex;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    }
+
+/* Neat "trick" whit the checked button to make animation */
+
+#btnControl:checked + label > img {
+    animation-name: liked_animation;
+    animation-duration: 0.5s;
+}
+
+/* Animation for the like button */
+
+@keyframes liked_animation {
+    0% {
+        transform: scale(1);
+
+    }
+    50% {
+        transform: scale(1.3);
+
+    }
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+#btnControl{display: none;}
+
+.unliked{
+    content: url("./assets/unliked.png");
+    width: 30px;
+    height: 30px;
+}
+
+.liked{
+    content: url("./assets/liked.png");
+    width: 30px;
+    height: 30px;
+}
+
+/* End Animation */
+
+
+
+#comments{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment{
+    margin: 1em;
+    }
+
+.comment_creator{
+display: inline;
+font-family: Inter ; 
+font-size: 12px;
+font-weight: 600 ;
+line-height: 15px;
+letter-spacing: 0em;
+}
+
+.comment_text{
+display: inline;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+#create_comment{
+
+    margin: 1em; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: auto;
+
+    width: 477px;
+    height: 55px;
+
+    background: #F1F1F1;
+
+    border-radius: 5px;
+
+}
+
+#write_comment{
+
+    width: 349px;
+    height: 15px;
+
+    background-color: transparent;
+    border-style: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+
+}
+
+#sumbit_comment{
+
+    width: 39px;
+    height: 15px;
+
+    background-color: transparent;
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    color: #3D8AFF;
+
+}
+
+#submit_comment:focus, input:focus{
+    
+        outline: none;
+    
+}
+
+
+
+
+
+/* The following is only for the carrousel you can ignore them, or go to line 82 of the index.js file to more info */
+
+
+
+
+#images{
+    width: 524px;
+    height: 325px;
+    display: flex;
+}
+
+#images_rotatory{
+    position: static;
+}
+
+.image_on_screen{
+    
+    position: absolute;
+    width: 524px;
+    height: 325px;
+}
+
+.image_off_screen{
+    position: absolute;
+    z-index: -1;
+    width: 524px;
+    height: 325px;
+}
+
+
+
+.next{
+    
+
+box-sizing: border-box;
+
+
+width: 25.46px;
+height: 25.46px;
+position: absolute;
+margin-top: 142.5px;
+margin-left: 486px;
+background-color: transparent;
+
+
+
+
+border: 3px solid #3D8AFF;
+border-right-style: none;
+border-top-style: none;
+transform: rotate(-135deg);
+
+}
+
+.back{
+  
+
+box-sizing: border-box;
+
+
+width: 25.46px;
+height: 25.46px;
+position: absolute;
+margin-top: 142.5px;
+margin-left: 10px;
+background-color: transparent;
+
+border: 3px solid #3D8AFF;
+border-right-style: none;
+border-top-style: none;
+transform: rotate(45deg);
+
+}
+
+.next_max{
+    /* Rectangle 6 */
+
+box-sizing: border-box;
+
+
+width: 25.46px;
+height: 25.46px;
+position: absolute;
+margin-top: 142.5px;
+margin-left: 486px;
+background-color: transparent;
+border: 3px solid rgba(61, 138, 255, 0.5);
+border-right-style: none;
+border-top-style: none;
+transform: rotate(-135deg);
+
+}
+
+.back_max{
+  
+
+box-sizing: border-box;
+
+
+width: 25.46px;
+height: 25.46px;
+position: absolute;
+margin-top: 142.5px;
+margin-left: 10px;
+background-color: transparent;
+
+border: 3px solid rgba(61, 138, 255, 0.5);
+border-right-style: none;
+border-top-style: none;
+transform: rotate(45deg);
+
+}
+
+#array_btns{
+
+    position: absolute;
+    margin-top: 285px;
+    margin-left: 225px;
+    width: 100px;
+    display: flex;
+
+
+}
+
+.images_option{
+
+    
+    width: 12px;
+    height: 12px;
+margin: 0.1em;
+border-radius: 100%;
+background: #3D8AFF;
+border-style: none;
+
+
+
+
+
+
+
+}
+
+.images_option_disabled{
+
+    
+    width: 12px;
+    height: 12px;
+margin: 0.1em;
+border-radius: 100%;
+border-style: none;
+background: rgba(255, 255, 255, 0.15);
+
+}
